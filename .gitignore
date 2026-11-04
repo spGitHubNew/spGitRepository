@@ -1,0 +1,27 @@
+# Project documents (kept local)
+*.pptx
+*.xlsx
+*.docx
+!test_contracts/*.docx
+~$*
+
+# OS / archive junk
+__MACOSX/
+.DS_Store
+Thumbs.db
+
+# Local tooling
+.claude/
+
+# Runtime data written by the app
+countersign/data/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Not part of this project
+test_contracts/Capstone_Prasanna_Links.md

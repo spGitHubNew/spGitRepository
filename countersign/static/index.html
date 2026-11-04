@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CounterSign</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f3a5f'/%3E%3Cpath d='M9 17l4 4 10-11' stroke='%23fff' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#/queue" aria-label="CounterSign home">
+    <span class="mark" aria-hidden="true">✓</span>
+    <span><b>CounterSign</b><small>AtliQ Contract Risk Analyzer</small></span>
+  </a>
+  <nav id="nav" aria-label="Main">
+    <a href="#/queue" data-nav="queue">Queue</a>
+    <a href="#/register" data-nav="register">Promise Register</a>
+    <a href="#/intake" data-nav="intake">New contract</a>
+    <a href="#/audit" data-nav="audit">Audit log</a>
+    <a href="#/evals" data-nav="evals">Evals</a>
+  </nav>
+  <div class="who">
+    <label for="userSel" class="sr">Signed in as</label>
+    <select id="userSel" title="Prototype role switch (stands in for SSO)"></select>
+  </div>
+</header>
+<div class="ribbon" role="note"><b>Not legal advice. A person decides.</b> <span id="todayNote"></span></div>
+<main id="app" tabindex="-1"><p class="muted pad">Loading…</p></main>
+<footer class="foot">
+  <span><b>Not legal advice. A person decides.</b> CounterSign never signs, approves, sends or negotiates anything.</span>
+  <span id="footMeta"></span>
+</footer>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>

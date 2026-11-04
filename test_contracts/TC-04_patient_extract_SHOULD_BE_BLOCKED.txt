@@ -1,0 +1,9 @@
+SYNTHETIC TEST DATA - fake records invented to test CounterSign's upload block (FR-05). No real people.
+
+patient_name, DOB, MRN, diagnosis
+Test Patient A, DOB: 01/02/1980, MRN 1000001, E11.9
+Test Patient B, DOB: 03/04/1975, MRN 1000002, I10.1
+Test Patient C, DOB: 05/06/1990, MRN 1000003, J45.9
+Test Patient D, DOB: 07/08/1968, MRN 1000004, E78.5
+Test Patient E, DOB: 09/10/1984, MRN 1000005, K21.9
+Test Patient F, DOB: 11/12/1979, MRN 1000006, M54.5
