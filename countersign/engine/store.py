@@ -1,11 +1,19 @@
 """Local persistence: decisions, statuses, register confirmations, uploads, and an append-only audit log (FR-38)."""
 
 import json
+import os
+import tempfile
 import threading
 from datetime import datetime
 from pathlib import Path
 
-DATA = Path(__file__).resolve().parents[1] / "data"
+# On Vercel the deployment is read-only; only the temp dir is writable (and it is not kept between instances).
+if os.environ.get("COUNTERSIGN_DATA_DIR"):
+    DATA = Path(os.environ["COUNTERSIGN_DATA_DIR"])
+elif os.environ.get("VERCEL"):
+    DATA = Path(tempfile.gettempdir()) / "countersign-data"
+else:
+    DATA = Path(__file__).resolve().parents[1] / "data"
 STATE = DATA / "state.json"
 AUDIT = DATA / "audit.jsonl"
 UPLOADS = DATA / "uploads"
